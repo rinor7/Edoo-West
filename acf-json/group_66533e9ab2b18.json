@@ -85,8 +85,8 @@
         },
         {
             "key": "field_6653442c4862c",
-            "label": "Post Type No-Swiper",
-            "name": "pt-noswiper",
+            "label": "Post Type Courses",
+            "name": "pt-courses",
             "aria-label": "",
             "type": "group",
             "instructions": "",
@@ -160,6 +160,34 @@
                     "placeholder": "",
                     "prepend": "",
                     "append": ""
+                },
+                {
+                    "key": "field_689a77fe4a2d3",
+                    "label": "Columns per Row",
+                    "name": "columns_per_row",
+                    "aria-label": "",
+                    "type": "select",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "col-lg-3": "4 Columns",
+                        "col-lg-4": "3 Columns",
+                        "col-lg-6": "2 Columns"
+                    },
+                    "default_value": false,
+                    "return_format": "value",
+                    "multiple": 0,
+                    "allow_null": 0,
+                    "allow_in_bindings": 0,
+                    "ui": 0,
+                    "ajax": 0,
+                    "placeholder": ""
                 }
             ]
         },
@@ -249,7 +277,7 @@
             {
                 "param": "page_template",
                 "operator": "==",
-                "value": "home.php"
+                "value": "frontpage.php"
             }
         ],
         [
@@ -269,5 +297,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1748646634
+    "modified": 1754955725
 }

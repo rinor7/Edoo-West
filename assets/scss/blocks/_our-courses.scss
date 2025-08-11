@@ -1,0 +1,67 @@
+/* Boxes with post type with no swiper style END */
+.section__our-courses {
+    padding: 40px 0;
+    background-color: #F2F2F2;
+    @include min-md {
+        padding: 60px 0;
+    }
+    .row {
+        row-gap: 40px;
+    }
+
+    .box__wrapper {
+        justify-content: flex-start;
+        flex-direction: column;
+        display: flex;
+        text-align: center;
+        align-items: center;
+        &-inner {
+            background: $white;
+            height: 100%;
+            border: 1px solid $white;
+            border-radius: 4px;
+            @include transition;
+            a {
+                height: 100%;
+                padding: 16px;
+                display: flex;
+                flex-direction: column;
+                row-gap: 6px;
+                 .img {
+                    width: 50px;
+                    height: 50px;
+                    margin-left: auto;
+                    margin-right: auto;
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                }
+
+                h3 {
+                    margin-top: 5px;
+                    margin-bottom: 5px;
+                    font-size: 20px;
+                    line-height: 25px;
+                }
+
+               p {
+                    font-size: 16px;
+                    line-height: 20px;
+                    font-weight: 300;
+                    display: -webkit-box;
+                    -webkit-line-clamp: 5;
+                    -webkit-box-orient: vertical;
+                    overflow: hidden;
+                }
+
+            }
+            &:hover {
+                border: 1px solid $primary-color;
+            }
+        }
+    }
+}
+
+/* Boxes with post type with no swiper style END */

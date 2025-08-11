@@ -42,7 +42,7 @@
     <?php the_field('field'); ?>
     <?php } ?>
 
-    <a href="tel:0038349000000" aria-label="link">049 000 000</a>
+    <a href="tel:0038343777777" aria-label="link">043 777 777</a>
 
     <a href="mailto:info@info.com" aria-label="link">info@info.com</a>
 
@@ -134,14 +134,9 @@
     )); ?>
 
 
-    <?php if (is_front_page() || is_404() || is_single() ): ?>
-    <?php endif; ?>
-
 
     <?php if(wp_is_mobile()) { ?>
                   
     <?php } else { ?>
     
     <?php } ?>
-
-    <?php echo __('Year', 'base-theme-domain-name'); ?>

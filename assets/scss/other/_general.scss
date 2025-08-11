@@ -102,7 +102,7 @@ h3 {
     display: block;
 }
 
-#primary {
+body:not(.home) #primary {
     @include min-md {
         min-height: 75vh;
     }
@@ -116,12 +116,29 @@ h3 {
         
     }
     &-title {
-        font-size: 20px;
+        font-size: 30px;
         font-weight: 600;
+        line-height: 35px;
+        @include min-md {
+            font-size: 40px;
+            font-weight: 600;
+            line-height: 45px;
+        }
+        &.no-subtitle {
+            margin-bottom: 40px;
+            @include min-md {
+                margin-bottom: 60px;
+            }
+        }
     }
     &-subtitle {
         font-size: 16px;
+        line-height: 20px;
         font-weight: 400;
+        @include min-md {
+            font-size: 18px;
+            line-height: 22px;
+        }
     }
 }
 /* General style END*/

@@ -90,12 +90,12 @@ function render_section_header($field_group_name) {
         echo '<div class="section-header">';
         
         if ($title) {
-            // Clean outer <p> if any and output safe HTML
-            echo '<div class="section-header-title">' . wp_kses_post(strip_outer_p_tags($title)) . '</div>';
+            // Add extra class if subtitle is missing
+            $title_class = $subtitle ? 'section-header-title' : 'section-header-title no-subtitle';
+            echo '<div class="' . esc_attr($title_class) . '">' . wp_kses_post(strip_outer_p_tags($title)) . '</div>';
         }
 
         if ($subtitle) {
-            // Clean outer <p> if any and output safe HTML
             echo '<div class="section-header-subtitle">' . wp_kses_post(strip_outer_p_tags($subtitle)) . '</div>';
         }
 
