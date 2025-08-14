@@ -1,0 +1,92 @@
+.contact__section {
+  padding: 60px 0;
+
+  .contact-info-boxes {
+    margin-bottom: 40px;
+    @include md {
+        row-gap: 24px;
+    }
+    .contact-box {
+      text-align: center;
+      padding: 30px;
+      border-radius: 12px;
+      background: #ffffff;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    height: 100%;
+      .contact-icon {
+        img {
+          width: 50px;
+          margin-bottom: 15px;
+        }
+      }
+
+      .contact-box-title {
+        font-size: 18px;
+        font-weight: 600;
+        margin-bottom: 10px;
+      }
+
+      .contact-box-text {
+        font-size: 14px;
+        line-height: 1.6;
+      }
+    }
+  }
+
+  .contact-intro {
+    margin-bottom: 30px;
+    font-size: 16px;
+    text-align: center;
+  }
+
+  .contact-form-wrapper {
+    max-width: 600px;
+    margin: 0 auto;
+    .wpcf7 {
+        form {
+            display: flex;
+            flex-direction: column;
+            row-gap: 18px;
+            .wpcf7-form-control {
+                height: 45px;
+                border-radius: 4px;
+                &.wpcf7-submit {
+                    @include button-2;
+                    width: 100%;
+                }
+            }
+            label {
+                width: 100%;
+                input {
+                    height: 45px;
+                    border-radius: 4px;
+                    padding-left: 12px;
+                    background: #F8F8F8;
+                    color: $white;
+                    width: 100%;
+                    border: 1px solid transparent;
+                    &:active {
+                        border-color: $primary-color;
+                    }
+                    &::placeholder {
+                        color: #5b5b5b;
+                        font-size: 14px;
+                        font-weight: 400;
+                        line-height: 17px;
+                    }
+                }
+            }
+            .wpcf7-submit {
+                width: fit-content!important;
+                margin: auto;
+                padding-left: 20px;
+                padding-right: 20px;
+                box-shadow: unset!important;
+            }
+            .wpcf7-spinner { 
+                display: none;
+            }
+        }
+    }
+  }
+}

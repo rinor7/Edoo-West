@@ -24,11 +24,16 @@
                 border-color: #DCDCFF;
                 border-radius: 50%;
                 filter: brightness(.7);
+                @include transition;
                 img {
                     width: 142px;
                     border-radius: 50%;
                     height: 142px;
                     object-fit: cover;
+                }
+                &:hover {
+                    max-width: 142px;
+                    padding: 0px;
                 }
             } 
 

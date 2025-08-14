@@ -79,18 +79,18 @@ form {
     .wpcf7-not-valid-tip {
         display: none;
     }
-    label {
-        span {
-            input {
-                border-bottom: 1px solid $red;
-            }
-        }
-    }
     &.invalid {
          .wpcf7-response-output {
             background-color: #ffb90052;
             color: $white;
          }
+         label {
+            span {
+                input {
+                    border-bottom: 1px solid $red;
+                }
+            }
+        }
     }
     &.sent {
         .wpcf7-response-output {

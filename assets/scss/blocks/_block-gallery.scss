@@ -1,0 +1,64 @@
+/* Boxes with post type and swiper style Start */
+.gallery__section {
+   .row {
+    &>div {
+        padding: 0;
+        height: 425px;
+        background-color: transparent;
+        @include lg {
+            height: 350px;
+        }
+        @include xs {
+            height: 300px;
+        }
+        .image-wrap {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            position: relative;
+            img {
+                width: 100%;
+                height: 100%;
+                object-position: center;
+                object-fit: cover;
+                @include transition;
+                transform: scale(1.01);
+            }
+            .image-overlay {
+                position: absolute;
+                bottom: 0px;
+                visibility: hidden;
+                width: 100%;
+                opacity: 0;
+                @include transition;
+                padding: 5px 20px;
+                text-align: center;
+                color: $white;
+                font-size: 14px;
+            }
+            &:hover {
+                img {
+                    transform: scale(1.05);
+                }
+                .image-overlay {
+                    visibility: visible;
+                    opacity: 1;
+                    background-color: $primary-color;
+                }
+            }
+            &:focus, &:active {
+                img {
+                    transform: scale(1.05);
+                }
+                .image-overlay {
+                    visibility: visible;
+                    opacity: 1;
+                    background-color: $primary-color;
+                }
+            }
+        }
+    }
+   }
+}
+
+/* Boxes with post type and swiper style END */

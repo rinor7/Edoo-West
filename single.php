@@ -6,9 +6,7 @@ include("includes/headers/{$header_type}.php");
 	<main id="primary" class="site-single single-page">
 
 	
-	<div class="intro">
-		<img src="<?php the_post_thumbnail_url();?>" alt="">
-	</div>
+	<?php include("includes/blocks/block-hero.php"); ?>
 	
 	<div class="container">
 		<div class="content">
