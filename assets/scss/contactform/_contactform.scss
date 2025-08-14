@@ -75,4 +75,33 @@
     }
 }
 
+form {
+    .wpcf7-not-valid-tip {
+        display: none;
+    }
+    label {
+        span {
+            input {
+                border-bottom: 1px solid $red;
+            }
+        }
+    }
+    &.invalid {
+         .wpcf7-response-output {
+            background-color: #ffb90052;
+            color: $white;
+         }
+    }
+    &.sent {
+        .wpcf7-response-output {
+            background-color: #4caf5069;
+            color: $white;
+         }
+    }
+    .wpcf7-response-output {
+        margin: 0!important;
+        font-size: 12px;
+        text-align: center;
+    }
+}
 /* CF 1 END*/
