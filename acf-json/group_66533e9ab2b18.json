@@ -4,8 +4,8 @@
     "fields": [
         {
             "key": "field_665342227360e",
-            "label": "Post Type Swiper",
-            "name": "pt-swiper",
+            "label": "Post Type Events",
+            "name": "pt-events",
             "aria-label": "",
             "type": "group",
             "instructions": "",
@@ -62,6 +62,87 @@
                 },
                 {
                     "key": "field_66533ec4a56ba",
+                    "label": "Subtitle Section",
+                    "name": "subtitle_section",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "Subtitle of section",
+                    "maxlength": "",
+                    "allow_in_bindings": 1,
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": ""
+                }
+            ]
+        },
+        {
+            "key": "field_689e372d8465e",
+            "label": "Post Type Reviews",
+            "name": "pt-reviews",
+            "aria-label": "",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "row",
+            "sub_fields": [
+                {
+                    "key": "field_689e372d8465f",
+                    "label": "Disable Row",
+                    "name": "disable_section",
+                    "aria-label": "",
+                    "type": "true_false",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "Checkbox to disable post type",
+                    "default_value": 0,
+                    "allow_in_bindings": 1,
+                    "ui": 0,
+                    "ui_on_text": "",
+                    "ui_off_text": ""
+                },
+                {
+                    "key": "field_689e372d84660",
+                    "label": "Title Section",
+                    "name": "title_section",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "Title of section",
+                    "maxlength": "",
+                    "allow_in_bindings": 1,
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": ""
+                },
+                {
+                    "key": "field_689e372d84661",
                     "label": "Subtitle Section",
                     "name": "subtitle_section",
                     "aria-label": "",
@@ -297,5 +378,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1754955725
+    "modified": 1755201566
 }

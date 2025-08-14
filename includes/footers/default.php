@@ -14,20 +14,30 @@
                             <?php dynamic_sidebar('footer-1');?>
                         </ul>
                     </a>
+                    <div class="socials">
+                        <ul>
+                            <?php dynamic_sidebar('footer-1-1');?>
+                        </ul>
+                    </div>
                 </div>
                 <div class="col-lg-3 footer-2">
                     <ul>
                         <?php dynamic_sidebar('footer-2');?>
                     </ul>
                 </div>
-                <div class="col-lg-3 footer-3">
+                <div class="col-lg-2 footer-3">
                     <ul>
                         <?php dynamic_sidebar('footer-3');?>
                     </ul>
                 </div>
-                <div class="col-lg-3 footer-4">
+                <div class="col-lg-2 footer-4">
                     <ul>
                         <?php dynamic_sidebar('footer-4');?>
+                    </ul>
+                </div>
+                <div class="col-lg-2 footer-5">
+                    <ul>
+                        <?php dynamic_sidebar('footer-5');?>
                     </ul>
                 </div>
             </div>
@@ -35,7 +45,7 @@
     </div>
     <div class="site-footer-copyrights">
         <div class="container">
-            <p>&copy;<?php echo date(' Y  ') ;?>All rights Reserved. <a href="/">Base Theme</a> </p>
+            <p>&copy;<?php echo date(' Y  ') ;?>All rights Reserved. <a href="https://klikoje.com/">klikoje.com</a> </p>
         </div>
     </div>
 </footer>

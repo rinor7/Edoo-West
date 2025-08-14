@@ -1,0 +1,28 @@
+/* Boxes with post type and swiper style Start */
+.slider__partners-section {
+    padding: 20px 0;
+    &>.container {
+        padding: 0;
+        max-width: unset;
+    }
+    .swiper {
+        padding: 0 85px;
+        .img {
+            width: 120px;
+            height: 120px;
+            margin: auto;
+            filter: grayscale(1);
+            @include transition;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+            &:hover {
+                filter: grayscale(0);
+            }
+        } 
+    }
+}
+
+/* Boxes with post type and swiper style END */

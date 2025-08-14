@@ -8,7 +8,17 @@ include("includes/headers/{$header_type}.php");
 
 <?php get_template_part('includes/blocks/block-banner-one', null, array()); ?>
 
+<?php get_template_part('includes/blocks/block-about-us', null, array()); ?>
+
+<?php get_template_part('includes/blocks/block-partners', null, array()); ?>
+
 <?php get_template_part('includes/blocks/our-courses', null, array()); ?>
+
+<?php get_template_part('includes/blocks/quick-section', null, array()); ?>
+
+<?php get_template_part('includes/blocks/block-events', null, array()); ?>
+
+<?php get_template_part('includes/blocks/block-reviews', null, array()); ?>
 
 </main>
 

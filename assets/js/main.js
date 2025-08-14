@@ -189,3 +189,102 @@ var swiper = new Swiper(".mySwiper-boxes-section", {
   },
 });
 
+var swiper = new Swiper(".mySwiper-reviews", {
+  slidesPerView: 1.5,
+  spaceBetween: 15,
+  loop: true,
+  autoHeight: true,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  breakpoints: {
+    575.98: {
+      slidesPerView: 2,
+      spaceBetween: 15,
+    },
+    767.98: {
+      slidesPerView: 3,
+      spaceBetween: 15,
+    },
+    991.98: {
+      slidesPerView: 4,
+      spaceBetween: 16,
+    },
+    1024: {
+      slidesPerView: 5,
+      spaceBetween: 16,
+    },
+  },
+});
+
+var swiper = new Swiper(".mySwiper-partners", {
+  slidesPerView: 1.5,
+  spaceBetween: 15,
+  loop: true,
+  autoHeight: true,
+  autoplay: {
+      delay: 3500,
+      disableOnInteraction: false,
+    },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  breakpoints: {
+    575.98: {
+      slidesPerView: 2,
+      spaceBetween: 15,
+    },
+    767.98: {
+      slidesPerView: 3,
+      spaceBetween: 15,
+    },
+    991.98: {
+      slidesPerView: 4,
+      spaceBetween: 16,
+    },
+    1024: {
+      slidesPerView: 5,
+      spaceBetween: 16,
+    },
+  },
+});
+
+var swiper = new Swiper(".mySwiper-events", {
+  slidesPerView: 1.3,
+  spaceBetween: 15,
+  loop: true,
+  autoHeight: false,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  breakpoints: {
+    640: {
+      slidesPerView: 2,
+      spaceBetween: 15,
+    },
+    991.98: {
+      slidesPerView: 2.3,
+      spaceBetween: 16,
+    },
+    1024: {
+      slidesPerView: 3,
+      spaceBetween: 16,
+    },
+  },
+});
+

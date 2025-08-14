@@ -1,5 +1,5 @@
 <?php if (!get_field('pt-courses')['disable_section'] ?? false): ?>
-<section class="section__our-courses">
+<section class="section__our-courses" id="our-courses">
     <div class="container">
         <?php render_section_header('pt-courses'); ?>
         <div class="row">
