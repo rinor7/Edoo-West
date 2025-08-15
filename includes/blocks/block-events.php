@@ -29,50 +29,61 @@
         while ($loop->have_posts()):
             $loop->the_post();
         ?>
-        <div class="swiper-slide">
-            <div class="slider-wrap">
-                <div class="img">
-                    <img src="<?php the_post_thumbnail_url(); ?>" alt="<?php the_title_attribute(); ?>" loading="lazy">
+       <div class="swiper-slide">
+    <?php 
+    $disable_clickable = get_field('disable_clickable'); 
+    if (!$disable_clickable): 
+    ?>
+        <a href="<?php the_permalink(); ?>" class="slider-wrap">
+    <?php else: ?>
+        <div class="slider-wrap">
+    <?php endif; ?>
 
-                    <?php 
-                        $badge = get_field('event_badge');
-                        if ($badge && $badge !== 'none') {
-                            echo '<div class="badge ' . esc_attr($badge) . '">' . ucfirst($badge) . '</div>';
-                        }
-                    ?>
-                </div>
-                <div class="content">
-                    <a href="<?php the_permalink(); ?>"></a>
-                    <?php 
-                    $event_date = get_field('event_date');
-                    if ($event_date) {
-                        $timestamp = strtotime($event_date);
-                        ?>
-                        <div class="date">
-                            <span class="event-day"><?php echo esc_html( date('j', $timestamp) ); ?></span>
-                            <span class="separator">|</span>
-                            <span class="event-month"><?php echo esc_html( date('F', $timestamp) ); ?></span>
-                        </div>
-                        <?php
-                    }
-                    ?>
-
-                    <h4><?php the_title(); ?></h4>
-
-                    <?php if (get_field('time')): ?>
-                        <div class="shift">
-                            <span><i class="fa-regular fa-clock"></i><?php the_field('time'); ?></span>
-                        </div>
-                    <?php endif; ?>
-
-                    <?php if (get_field('external_description')): ?>
-                        <div class="description">
-                            <?php the_field('external_description'); ?>
-                        </div>
-                    <?php endif; ?>
-                </div>
-            </div>
+        <div class="img">
+            <img src="<?php the_post_thumbnail_url(); ?>" alt="<?php the_title_attribute(); ?>" loading="lazy">
         </div>
+        <div class="content">
+            <?php 
+            $event_date = get_field('event_date');
+            if ($event_date) {
+                $timestamp = strtotime($event_date);
+                ?>
+                <div class="date">
+                    <span class="event-day"><?php echo esc_html( date('j', $timestamp) ); ?></span>
+                    <span class="separator">|</span>
+                    <span class="event-month"><?php echo esc_html( date('F', $timestamp) ); ?></span>
+                </div>
+                <?php
+            }
+            ?>
+            <h4><?php the_title(); ?></h4>
+
+            <?php if (get_field('time')): ?>
+                <div class="shift">
+                    <span><i class="fa-regular fa-clock"></i><?php the_field('time'); ?></span>
+                </div>
+            <?php endif; ?>
+
+            <?php if (get_field('external_description')): ?>
+                <div class="description">
+                    <?php the_field('external_description'); ?>
+                </div>
+            <?php endif; ?>
+            <?php 
+                $badge = get_field('event_badge');
+                if ($badge && $badge !== 'none') {
+                    echo '<div class="badge ' . esc_attr($badge) . '">' . ucfirst($badge) . '</div>';
+                }
+            ?>
+        </div>
+
+    <?php if (!$disable_clickable): ?>
+        </a>
+    <?php else: ?>
+        </div>
+    <?php endif; ?>
+</div>
+
         <?php
         endwhile;
         wp_reset_postdata();

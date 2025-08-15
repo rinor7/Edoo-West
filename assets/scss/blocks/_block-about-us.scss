@@ -1,9 +1,9 @@
 /* Image - Text style Start */
 .section__about-us {
     // background-color: rgb(99, 73, 73);
-    padding: 40px 0;
+    padding: 40px 0 0px 0;
     @include min-md {
-        padding: 60px 0;
+        padding: 60px 0 20px 0;
     }
 
     .row {
@@ -108,55 +108,44 @@
             font-weight: 300;
         }
     }
+    .more-about-us {
+        margin-top: 40px;
+        display: flex;
+        flex-direction: column;
+        row-gap: 40px;
+        @include min-md {
+            margin-top: 60px;
+        }
+        .about-mission, .about-vision {
+            h5 {
+                color: #000;
+                font-size: 25px;
+                font-weight: 700;
+                line-height: 30px;
+                position: relative;
+                margin-bottom: 10px;
+                width: fit-content;
+                &:after {
+                    position: absolute;
+                    content: "";
+                    width: 35%;
+                    height: 3px;
+                    background-color: $primary-color;
+                    left: 0;
+                    bottom: -8px;
+                    transform: translateY(-50%);
+                }
+                @include sm {
+                    font-size: 30px;
+                    line-height: 35px;
+                    margin-bottom: 20px;
+                }
+            }
+            p {
+                font-weight: 300;
+            }
+        }
+    }
 }
-
-// .image-no-container-left {
-//     position: relative;
-//     padding-top: 0;
-
-//     .row {
-//         @include md {
-//             row-gap: 20px;
-//         }
-
-//         @include xs {
-//             row-gap: 0;
-//         }
-//     }
-
-//     .rights {
-//         padding-top: 60px;
-//         padding-bottom: 60px;
-//         margin-left: auto;
-//     }
-
-//     .lefts {
-//         flex: unset;
-//         max-width: unset;
-//         position: relative;
-//         width: 100%;
-//         left: 0;
-//         height: 100%;
-//         top: 0;
-//         align-self: unset;
-
-//         @include xs {
-//             padding-right: 0;
-//             padding-left: 0;
-//         }
-
-//         @include min-md {
-//             width: 50%;
-//             position: absolute;
-//             padding-left: 0;
-//         }
-
-//         .img {
-//             @include min-xs {
-//                 height: 100%;
-//             }
-//         }
-//     }
-// }
 
 /* Image - Text style END */

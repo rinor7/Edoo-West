@@ -288,3 +288,42 @@ var swiper = new Swiper(".mySwiper-events", {
   },
 });
 
+var swiper = new Swiper(".aboutUsSwiper", {
+  slidesPerView: 1.5,
+    spaceBetween: 16,
+    loop: true,
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev'
+    },
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true
+    },
+    breakpoints: {
+        575.98: { slidesPerView: 2 },
+        767.98: { slidesPerView: 3 },
+        1024: { slidesPerView: 4 }
+    }
+});
+
+// Show "Other" Field CF7 When Selected
+document.addEventListener('DOMContentLoaded', function() {
+    const select = document.querySelector('select[name="course-select"]');
+    const otherWrap = document.querySelector('.other-course-wrap');
+
+    if (select && otherWrap) {
+        // Make first option disabled (placeholder)
+        if (select.options.length > 0) {
+            select.options[0].disabled = true;
+        }
+
+        select.addEventListener('change', function() {
+            if (this.value === 'Other') {
+                otherWrap.style.display = 'block';
+            } else {
+                otherWrap.style.display = 'none';
+            }
+        });
+    }
+});

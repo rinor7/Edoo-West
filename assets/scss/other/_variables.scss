@@ -4,8 +4,8 @@ $white: #fff;
 $white-light: #f9f9f9;
 $black: #000000;
 $red: red;
-$primary-color: coral;
-$primary-color-light: coral;
+$primary-color: #FCD13F;
+$primary-color-light: #fdd656;
 $secondary-color: #000;
 $secondary-color-light: #000000a4;
 $grey-color: #888;
@@ -32,12 +32,12 @@ $grey-color: #888;
     justify-content: center;
     align-items: center;
     will-change: box-shadow, transform;
-    background-color: coral;
-    background-image: linear-gradient(to right, coral 0%, #ff9966 51%, coral 100%);
+    background-color: #FCD13F;
+    background-image: linear-gradient(to right, #FCD13F 0%, #fdd656 51%, #FCD13F 100%);
     border-radius: 4px;
-    box-shadow: 0 2px 4px rgba(255, 127, 80, 0.3), 
-                0 3px 6px -2px rgba(255, 127, 80, 0.4), 
-                0 1px 8px rgba(255, 127, 80, 0.25);
+    box-shadow: 0 2px 4px rgba(252, 209, 63, 0.3),
+                0 3px 6px -2px rgba(252, 209, 63, 0.4),
+                0 1px 8px rgba(252, 209, 63, 0.25);
     background-size: 200% auto !important;
     white-space: nowrap;
     transition: box-shadow 0.2s cubic-bezier(.4, 0, 1, 1),
@@ -45,14 +45,15 @@ $grey-color: #888;
                 background-position 0.5s;
 
     &:hover {
-        box-shadow: 0 14px 26px -12px rgba(255, 127, 80, 0.7), 
-                    0 4px 23px rgba(0, 0, 0, 0.3), 
-                    0 8px 10px -5px rgba(255, 127, 80, 0.5);
+        box-shadow: 0 14px 26px -12px rgba(252, 209, 63, 0.7),
+                    0 4px 23px rgba(0, 0, 0, 0.3),
+                    0 8px 10px -5px rgba(252, 209, 63, 0.5);
         background-position: right center;
-        background-color: #ff9966;
+        background-color: #fdd656;
         border-color: transparent;
     }
 }
+
 
 
 @mixin button-2 {

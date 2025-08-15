@@ -15,9 +15,25 @@ $contact_form_shortcode = $contact_section['contact_form_shortcode']; // CF7 or 
             <?php foreach ($info_boxes as $box): ?>
             <div class="col-lg-4 col-md-4 col-12">
                 <div class="contact-box">
-                    <?php if (!empty($box['icon'])): ?>
+                   <?php if (!empty($box['icon'])): ?>
                         <div class="contact-icon">
-                            <img src="<?php echo esc_url($box['icon']); ?>" alt="<?php echo esc_attr($box['title']); ?>">
+                            <?php 
+                            // Get attachment ID from URL
+                            $attachment_id = attachment_url_to_postid($box['icon']); 
+                            if ($attachment_id) {
+                                $file_path = get_attached_file($attachment_id); // server path
+                                $file_ext = pathinfo($file_path, PATHINFO_EXTENSION);
+
+                                if ($file_ext === 'svg' && file_exists($file_path)) {
+                                    echo file_get_contents($file_path);
+                                } else {
+                                    echo '<img src="' . esc_url($box['icon']) . '" alt="' . esc_attr($box['title']) . '">';
+                                }
+                            } else {
+                                // fallback if attachment ID not found
+                                echo '<img src="' . esc_url($box['icon']) . '" alt="' . esc_attr($box['title']) . '">';
+                            }
+                            ?>
                         </div>
                     <?php endif; ?>
                     <?php if (!empty($box['title'])): ?>

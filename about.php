@@ -5,7 +5,9 @@ include("includes/headers/{$header_type}.php");
 
 <main id="primary" class="site-blog">
     
-    <?php include("includes/blocks/block-hero.php"); ?>
+<?php get_template_part('includes/blocks/block-about-us', null, array()); ?>
+
+<?php get_template_part('includes/blocks/block-gallery-slider', null, array()); ?>
 
 </main>
 

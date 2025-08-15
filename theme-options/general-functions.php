@@ -120,3 +120,35 @@ if (function_exists('acf_add_options_page')) {
         'redirect'      => false
     ));
 }
+
+//Well use a CF7 filter in functions.php to replace a tag placeholder in the form with the post titles.
+// Populate CF7 dropdown with course titles + "Other"
+add_filter('wpcf7_form_tag', function($tag) {
+    if ($tag['name'] !== 'course-select') {
+        return $tag;
+    }
+
+    // Placeholder (will be disabled in HTML)
+    $values = ['Choose a course:'];
+
+    // Fetch courses
+    $courses = get_posts([
+        'post_type' => 'courses',
+        'posts_per_page' => -1,
+        'orderby' => 'title',
+        'order' => 'ASC'
+    ]);
+
+    foreach ($courses as $course) {
+        $values[] = $course->post_title;
+    }
+
+    // Add "Other"
+    $values[] = 'Other';
+
+    $tag['raw_values'] = $values;
+    $tag['values'] = $values;
+
+    return $tag;
+});
+

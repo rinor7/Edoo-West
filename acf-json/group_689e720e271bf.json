@@ -220,7 +220,7 @@
             {
                 "param": "page_template",
                 "operator": "==",
-                "value": "contact.php"
+                "value": "partner-with-us.php"
             }
         ]
     ],
@@ -233,5 +233,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1755214578
+    "modified": 1755255518
 }

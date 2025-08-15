@@ -6,6 +6,48 @@ include("includes/headers/{$header_type}.php");
 <?php include("includes/blocks/block-hero.php"); ?>
 
 <main id="primary" class="site-archive archive-courses section__our-courses">
+
+    <div class="container">
+        <?php
+        // Get the section from ACF Options Page
+        $boxes_section = get_field('event_boxes_section', 'option');
+
+        if ($boxes_section && !empty($boxes_section['boxes'])):
+        ?>
+        <section class="event-boxes-section">
+            <div class="container">
+
+                <!-- Section Title -->
+                <?php if (!empty($boxes_section['section_title'])): ?>
+                    <h2><?php echo wp_kses_post($boxes_section['section_title']); ?></h2>
+                <?php endif; ?>
+
+                <div class="row">
+                    <?php foreach ($boxes_section['boxes'] as $box): ?>
+                        <div class="col-lg-4">
+                            <div class="event-box">
+                                <?php if (!empty($box['span_text'])): ?>
+                                    <span class="box-span"><?php echo esc_html($box['span_text']); ?></span>
+                                <?php endif; ?>
+
+                                <?php if (!empty($box['title'])): ?>
+                                    <h3><?php echo esc_html($box['title']); ?></h3>
+                                <?php endif; ?>
+
+                                <?php if (!empty($box['subtitle'])): ?>
+                                    <p><?php echo esc_html($box['subtitle']); ?></p>
+                                <?php endif; ?>
+                            </div>
+                        </div>
+                    <?php endforeach; ?>
+                </div>
+
+            </div>
+        </section>
+        <?php endif; ?>
+
+    </div>
+
     <div class="container">
         <?php if (have_posts()) : ?>
             <div class="row">

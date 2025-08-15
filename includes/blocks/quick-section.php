@@ -11,7 +11,7 @@ if (empty($quick_call['disable_section'])):
         $inline_style .= 'background-image:url(' . esc_url($background) . ');background-size:cover;background-position:center;';
     }
 ?>
-<section class="quick__section" id="contact" aria-label="Quick Call to Action"
+<section class="quick__section" id="join-a-course" aria-label="Quick Call to Action"
     <?php if ($inline_style): ?>style="<?php echo $inline_style; ?>"<?php endif; ?>>
     
     <?php if ($background): ?>

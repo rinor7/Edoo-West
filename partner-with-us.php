@@ -1,4 +1,4 @@
-<?php //Template Name: Contact
+<?php //Template Name: Partner with us
 global $header_type; // required to access global variable
 include("includes/headers/{$header_type}.php"); 
 ?>

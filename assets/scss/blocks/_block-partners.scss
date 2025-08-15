@@ -11,16 +11,16 @@
             width: 120px;
             height: 120px;
             margin: auto;
-            filter: grayscale(1);
+            // filter: grayscale(1);
             @include transition;
             img {
                 width: 100%;
                 height: 100%;
                 object-fit: cover;
             }
-            &:hover {
-                filter: grayscale(0);
-            }
+            // &:hover {
+            //     filter: grayscale(0);
+            // }
         } 
     }
 }
