@@ -1,6 +1,6 @@
 /*Single Events Start*/
 
-.single-page {
+.single-events {
     padding: 60px 0;
     @include md {
         padding: 40px 0;
@@ -13,6 +13,8 @@
             min-height: 200px;
             width: 100%;
             height: 100%;
+            border-radius: 4px;
+            overflow: hidden;
             img {
                 object-fit: cover;
                 width: 100%;
