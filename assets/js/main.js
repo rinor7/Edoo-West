@@ -53,56 +53,6 @@ $(document).ready(function() {
   });
 });
 
-// for rightmenu.php header
-// $(document).ready(function() {
-//   $('.navbar-toggler').click(function() {
-//     $('.menu-menu-1-container').toggleClass('act');
-//   });
-
-//   $('li a').click(function() {
-//     $('.menu-menu-1-container').removeClass('act');
-//     $('.menu-bottom').removeClass('menu-bottom-click');
-//     $('.menu-top').removeClass('menu-top-click');
-//   });
-// });
- 
-// Search Result
-// $('.control').click( function(){
-//   $('body').addClass('search-active');
-//   $('.fa-search-loc').addClass('d-none');
-//   $('.input-search').focus();
-// });
-// Search Result END
-
-// $('.icon-close').click( function(){
-//   $('body').removeClass('search-active');
-//   $('.fa-search-loc').removeClass('d-none');
-// });
-
-
-
-// var prevScrollpos = window.pageYOffset;
-// window.onscroll = function() {
-// var currentScrollPos = window.pageYOffset;
-//   if (prevScrollpos > currentScrollPos) {
-//     document.getElementById("standard-header").style.cssText = "top: 0px; transition: .5s";
-//   } else {
-//     document.getElementById("standard-header").style.cssText = "top: -45px; transition: .5s;";
-//   }
-//   prevScrollpos = currentScrollPos;
-// }
-
-// $(document).ready(function() {
-//   const navbarToggler = $('.navbar-toggler');
-//   const site = $('.site-home, .site, .site-main, .page-all, .site-other');
-//   const body = $('html');
-//   navbarToggler.on('click', function() {
-//     body.toggleClass('no-scroll');
-//     site.toggleClass('filter-style');
-//   });
-//   });
-
-
 // Menu for standard header with blur effect
 $(document).ready(function() {
   const navbarToggler = $('.navbar-toggler-standard');
@@ -153,41 +103,6 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 });
 
-
-// var swiper = new Swiper(".mySwiper", {
-//   pagination: {
-//     el: ".swiper-pagination",
-//   },
-// });
-
-var swiper = new Swiper(".mySwiper-boxes-section", {
-  slidesPerView: 1,
-  spaceBetween: 15,
-  loop: true,
-  autoHeight: true,
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
-  breakpoints: {
-    640: {
-      slidesPerView: 2,
-      spaceBetween: 15,
-    },
-    768: {
-      slidesPerView: 3,
-      spaceBetween: 16,
-    },
-    1024: {
-      slidesPerView: 4,
-      spaceBetween: 16,
-    },
-  },
-});
 
 var swiper = new Swiper(".mySwiper-reviews", {
   slidesPerView: 1.5,

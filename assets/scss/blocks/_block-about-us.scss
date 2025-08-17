@@ -1,11 +1,9 @@
 /* Image - Text style Start */
 .section__about-us {
-    // background-color: rgb(99, 73, 73);
     padding: 40px 0 0px 0;
-    @include min-md {
-        padding: 60px 0 20px 0;
-    }
-
+        @include min-md {
+            padding: 60px 0 20px 0;
+        }
     .row {
         row-gap: 40px;
     }
@@ -55,8 +53,6 @@
         flex-direction: column;
         display: flex;
         row-gap: 12px;
-        // padding-top: 60px;
-        // padding-bottom: 60px;
         @include min-md {
             padding-left: 40px;
         }
@@ -108,6 +104,7 @@
             font-weight: 300;
         }
     }
+
     .more-about-us {
         margin-top: 40px;
         display: flex;

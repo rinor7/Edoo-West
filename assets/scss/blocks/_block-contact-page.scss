@@ -57,8 +57,6 @@
             flex-direction: column;
             row-gap: 18px;
             .wpcf7-form-control {
-                // height: 45px;
-                // border-radius: 4px;
                 &.wpcf7-submit {
                   @include button;
                   width: fit-content;
