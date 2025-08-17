@@ -1,4 +1,4 @@
-/*Single page Start*/
+/*Single Events Start*/
 
 .single-page {
     padding: 60px 0;
@@ -70,80 +70,79 @@
                 .extra-shortcode {
                     max-width: 800px;
                     margin: auto;
-                    .wpcf7 {
-                    form {
-                        display: flex;
-                        flex-direction: column;
-                        row-gap: 18px;
-                        .wpcf7-form-control {
-                            height: 45px;
-                            width: 100%;
-                            border-radius: 4px;
-                            &.wpcf7-submit {
-                                @include button;
-                                width: fit-content;
+                   .wpcf7 {
+                        form {
+                            display: flex;
+                            flex-direction: column;
+                            row-gap: 18px;
+                            .wpcf7-form-control {
+                                &.wpcf7-submit {
+                                    @include button;
+                                    width: fit-content;
+                                    margin: auto;
+                                    padding-left: 20px;
+                                    padding-right: 20px;
+                                }
+                            }
+                            label {
+                                width: 100%;
+                                input {
+                                    height: 45px;
+                                    border-radius: 4px;
+                                    padding-left: 12px;
+                                    background: #F8F8F8;
+                                    color: #5b5b5b;
+                                    width: 100%;
+                                    border: 1px solid transparent;
+                                    &:active, &:focus {
+                                        border-color: $primary-color;
+                                    }
+                                    &::placeholder {
+                                        color: #5b5b5b;
+                                        font-size: 14px;
+                                        font-weight: 400;
+                                        line-height: 17px;
+                                    }
+                                }
+                                textarea {
+                                    height: 90px;
+                                    border-radius: 4px;
+                                    padding-left: 12px;
+                                    padding-top: 6px;
+                                    background: #F8F8F8;
+                                    color: #5b5b5b;
+                                    width: 100%;
+                                    border: 1px solid transparent;
+                                    width: 100%;
+                                    font-size: 14px;
+                                    font-weight: 400;
+                                    line-height: 17px;
+                                    &:active, &:focus {
+                                        border-color: $primary-color;
+                                    }
+                                    &::placeholder {
+                                        color: #5b5b5b;
+                                        font-size: 14px;
+                                        font-weight: 400;
+                                        line-height: 17px;
+                                    }
+                                }
+                            }
+                            .wpcf7-submit {
+                                width: fit-content!important;
                                 margin: auto;
                                 padding-left: 20px;
                                 padding-right: 20px;
+                                box-shadow: unset!important;
                             }
-                        }
-                        label {
-                            width: 100%;
-                            input, select {
-                                height: 45px;
-                                border-radius: 4px;
-                                padding-left: 12px;
-                                background: #f8f8f8;
-                                color: #5b5b5b;
-                                width: 100%;
-                                border: 1px solid transparent;
-                                font-size: 14px;
-                                font-weight: 400;
-                                line-height: 17px;
-                                &::placeholder {
-                                    color: #5b5b5b;
-                                    font-size: 14px;
-                                    font-weight: 400;
-                                    line-height: 17px;
-                                }
-                                option {
-                                    font-size: 14px;
-                                    font-weight: 400;
-                                    line-height: 17px;
-                                }
-                            }
-                            select {
-                                padding-left: 8px;
-                            }
-                        }
-                        .wpcf7-spinner { 
-                            display: none;
-                        }
-                        .other-course-wrap {
-                            textarea {
-                                height: 90px;
-                                border-radius: 4px;
-                                padding-left: 12px;
-                                padding-top: 6px;
-                                background: #FFFFFF2E;
-                                color: $white;
-                                width: 100%;
-                                font-size: 14px;
-                                font-weight: 400;
-                                line-height: 17px;
-                                &::placeholder {
-                                    color: $white;
-                                    font-size: 14px;
-                                    font-weight: 400;
-                                    line-height: 17px;
-                                }
+                            .wpcf7-spinner { 
+                                display: none;
                             }
                         }
                     }
-                }
             }
         }
     }
 }
 
-/*Single page END*/
+/*Single Events END*/

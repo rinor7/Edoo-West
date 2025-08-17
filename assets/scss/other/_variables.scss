@@ -23,10 +23,12 @@ $grey-color: #888;
 }
 
 @mixin button {
-    width: 185px;
+    min-width: 185px;
+    padding-left: 12px;
+    padding-right: 12px;
     height: 45px;
     border: 1px solid transparent;
-    color: #fff;
+    color: $black;
     text-align: center;
     display: flex;
     justify-content: center;
@@ -57,8 +59,10 @@ $grey-color: #888;
 
 
 @mixin button-2 {
-    width: 185px;
+    min-width: 185px;
     height: 45px;
+    padding-left: 12px;
+    padding-right: 12px;
     border: 1px solid;
     border-color: $white;
     color: $black;

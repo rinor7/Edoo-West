@@ -34,7 +34,7 @@ header {
                             transition: .2s ease-out;
                         }  
                         @include xs {
-                            width: 100%;
+                            width: 85%;
                             right: -100%;
                         }
                     }
@@ -53,6 +53,14 @@ header {
                             }
                             a {
                                 column-gap: 10px;
+                                font-size: 16px;
+                                @include lg {
+                                    font-size: 14px;
+                                }
+                                @include md {
+                                    font-weight: 700;
+                                    font-size: 16px;
+                                }
                                 @include min-md {
                                     display: flex;
                                     align-items: center;
@@ -89,11 +97,16 @@ header {
                         }
                     }
                     @include xs {
-                        width: 100%;
+                        width: 85%;
                         right: -100%;
                     }
                 }
             }
+        }
+    }
+    &.header-404 {
+        nav {
+            justify-content: space-between;
         }
     }
 }

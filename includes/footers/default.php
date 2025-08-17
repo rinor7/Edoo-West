@@ -47,7 +47,14 @@
     </div>
     <div class="site-footer-copyrights">
         <div class="container">
-            <p>&copy;<?php echo date(' Y  ') ;?>All rights Reserved. <a href="https://klikoje.com/">klikoje.com</a> </p>
+            <p>
+                &copy;<?php echo date(' Y '); ?>
+                <?php 
+                $lang = function_exists('pll_current_language') ? pll_current_language() : 'en';
+                echo ($lang === 'de') ? 'Alle Rechte vorbehalten.' : 'All rights Reserved.'; 
+                ?>
+                <a href="https://klikoje.com/">klikoje.com</a>
+            </p>
         </div>
     </div>
 </footer>

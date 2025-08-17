@@ -59,14 +59,7 @@
             {
                 "param": "page_template",
                 "operator": "==",
-                "value": "about.php"
-            }
-        ],
-        [
-            {
-                "param": "page_template",
-                "operator": "==",
-                "value": "contact.php"
+                "value": "default"
             }
         ]
     ],
@@ -79,5 +72,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1755213951
+    "modified": 1755460989
 }

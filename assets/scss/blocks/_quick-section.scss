@@ -20,13 +20,12 @@
         z-index: 1;
     }
     .side-wrapper {
-        justify-content: space-between;
-        display: flex;
-        align-items: center;
-        row-gap: 20px;
-
-        @include md {
-            &>.row {
+        .row {
+            justify-content: space-between;
+            display: flex;
+            align-items: center;
+            row-gap: 40px;
+            @include md {
                 flex-wrap: wrap;
                 row-gap: 24px;
             }
@@ -78,8 +77,10 @@
                         width: 100%;
                         border-radius: 4px;
                         &.wpcf7-submit {
-                            @include button-2;
+                            @include button;
                             width: 100%;
+                            padding-left: 20px;
+                            padding-right: 20px;
                         }
                     }
                     label {

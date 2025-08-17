@@ -13,7 +13,18 @@ if (is_tax() || is_category() || is_tag()) {
 } elseif (is_post_type_archive() || is_singular()) {
 
     $post_type = get_post_type();
-    $page_title = is_singular() ? get_the_title() : get_post_type_object($post_type)->labels->singular_name;
+
+    if (is_singular()) {
+        $page_title = get_the_title();
+    } elseif (is_post_type_archive('courses')) {
+        // Only for Courses archive
+        $page_title = (function_exists('pll_current_language') && pll_current_language() === 'de') 
+            ? 'Kurse' // German
+            : 'Courses'; // English
+    } else {
+        // Other post type archives
+        $page_title = get_post_type_object($post_type)->labels->singular_name;
+    }
 
     // Default fallback
     $hero_image = '';
@@ -21,10 +32,14 @@ if (is_tax() || is_category() || is_tag()) {
 
     // Get hero from options page based on post type
     if ($post_type === 'courses') {
-        $hero_image      = get_field('courses_hero', 'option');       
-    // } elseif ($post_type === 'events') {
-    //     $hero_image      = get_field('events_hero', 'option');
+        // If German, get German hero; otherwise use default English hero
+        if (function_exists('pll_current_language') && pll_current_language() === 'de') {
+            $hero_image = get_field('courses_hero_de', 'option') ?: get_field('courses_hero', 'option');
+        } else {
+            $hero_image = get_field('courses_hero', 'option');
+        }
     }
+
 } else {
     // Regular pages
     $page_title = get_the_title();

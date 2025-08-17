@@ -13,16 +13,16 @@ function custom_post_type() {
 
     register_post_type('courses', array(
         'labels' => array(
-        'name' => 'Courses',         // used in breadcrumbs, archives, etc.
-        'singular_name' => 'Courses', // single post
-        'menu_name' => 'My Courses', // admin menu
+            'name'          => __('Courses', 'base-theme-domain-name'),
+            'singular_name' => __('Course', 'base-theme-domain-name'),
+            'menu_name'     => __('My Courses', 'base-theme-domain-name'),
         ),
-        'public' => true,
-        'has_archive' => true,
-        'supports' => array('title', 'editor', 'excerpt', 'thumbnail', 'revisions'),
-        'taxonomies' => array('custom_taxonomy', 'post_tag'),
-        'menu_position' => 8,
-        'menu_icon' => 'dashicons-welcome-add-page',
+        'public'       => true,
+        'has_archive'  => true,
+        'rewrite'      => array('slug' => 'courses'), // ⚠️ keep plain slug here
+        'supports'     => array('title', 'editor', 'excerpt', 'thumbnail', 'revisions'),
+        'menu_position'=> 8,
+        'menu_icon'    => 'dashicons-welcome-add-page',
     ));
 
     register_post_type('events', array(
@@ -30,7 +30,7 @@ function custom_post_type() {
         'public' => true,
         'has_archive' => false,
         'supports' => array('title', 'editor', 'excerpt', 'thumbnail', 'revisions'),
-        'taxonomies' => array('custom_taxonomy', 'post_tag'), //if you need "Uncategorized" category, replace "custom_taxonomy" with "category"
+        // 'taxonomies' => array('custom_taxonomy', 'post_tag'), //if you need "Uncategorized" category, replace "custom_taxonomy" with "category"
         'menu_position' => 8,
         'menu_icon' => 'dashicons-welcome-add-page',
     ));
@@ -40,7 +40,7 @@ function custom_post_type() {
         'public' => true,
         'has_archive' => false,
         'supports' => array('title', 'editor', 'excerpt', 'thumbnail', 'revisions'),
-        'taxonomies' => array('custom_taxonomy', 'post_tag'), //if you need "Uncategorized" category, replace "custom_taxonomy" with "category"
+        // 'taxonomies' => array('custom_taxonomy', 'post_tag'), //if you need "Uncategorized" category, replace "custom_taxonomy" with "category"
         'menu_position' => 8,
         'menu_icon' => 'dashicons-welcome-add-page',
     ));

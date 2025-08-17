@@ -9,8 +9,12 @@ include("includes/headers/{$header_type}.php");
 
     <div class="container">
         <?php
-        // Get the section from ACF Options Page
-        $boxes_section = get_field('event_boxes_section', 'option');
+        $lang = function_exists('pll_current_language') ? pll_current_language() : 'en';
+        if ($lang === 'de') {
+            $boxes_section = get_field('event_boxes_section_de', 'option') ?: get_field('event_boxes_section', 'option');
+        } else {
+            $boxes_section = get_field('event_boxes_section', 'option');
+        }
 
         if ($boxes_section && !empty($boxes_section['boxes'])):
         ?>

@@ -174,7 +174,7 @@ header {
              // overflow: hidden;
          }
          &.rightmenu, &.centerized-logo {
-             @include min-xs {
+            //  @include min-xs {
                  &:before {
                      position: fixed;
                      content: "";
@@ -183,20 +183,27 @@ header {
                      opacity: 1;
                      @include filter-header;
                      transition: 1s;
+                     z-index: 2;
                      background: #000000a6;
+                     top: 0;
                  }   
-             }
+            //  }
              .headerbar {
                  overflow: hidden;
-                 position: fixed;
                  width: 100%;
+                 @include min-md {
+                    position: fixed;
+                 }
                  #navbarNav {
                      height: 100%!important;
-                     overflow-y: auto;
+                    overflow-y: auto;
                      .navbar-nav {
                          height: 100%;
                          position: relative;
                          padding-top: 70px;
+                         @include md {
+                            padding-top: 90px;
+                         }
                          li {
                              &:last-of-type {
                                  padding-bottom: 20px;
@@ -204,7 +211,7 @@ header {
                          }
                      }
                  }
-                 @include min-xs {
+                //  @include min-xs {
                      &:before {
                          position: absolute;
                          content: "";
@@ -215,7 +222,7 @@ header {
                          @include filter-header;
                          transition: 1s;
                          background: #000000a6;
-                     } 
+                    //  } 
                  } 
             }
          }
@@ -242,5 +249,35 @@ header {
  
  #wpadminbar {
      position: absolute!important;
+ }
+
+ .right-widget {
+    ul {
+        li {
+            select {
+                border-color: transparent;
+                // border-width: 3px;
+                padding: 5px;
+                background-color: $primary-color;
+                border-radius: 4px
+            }
+        }
+    }
+ }
+ #navbarNav {
+    #primary-menu {
+        .menu-item {
+            &.menu-item-language {
+                    margin-top: 30px;
+                select {
+                    border-color: transparent;
+                    // border-width: 3px;
+                    padding: 5px;
+                    background-color: $primary-color;
+                    border-radius: 4px
+                }
+            }
+        }
+    }
  }
 /* Global Header Style END*/

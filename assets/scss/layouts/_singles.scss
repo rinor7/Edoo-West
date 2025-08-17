@@ -4,6 +4,7 @@
     .intro {
         height: 250px;
         overflow: hidden;
+        width: 100%;
         img {
             object-fit: cover;
             width: 100%;
@@ -13,10 +14,6 @@
 
     .content {
         margin-top: 40px;
-
-        h1 {}
-
-        p {}
     }
 } 
 

@@ -2,7 +2,7 @@
 .site-404 {
 	display: table;
 	width: 100%;
-	height: calc(100vh - 60px);
+	height: calc(100vh - 70px);
 	text-align: center;
 	color: $grey-color;
 	.fof {
@@ -23,5 +23,12 @@
 	}
 	to { 
 	  box-shadow: inset -3px 0px 0px transparent;
+	}
+  }
+  .header-404-button {
+	a {
+		@include button;
+		min-width: unset;
+		width: fit-content;
 	}
   }

@@ -1,6 +1,12 @@
 <?php 
-$newsletter_text = get_field('newsletter_text', 'option');
-$newsletter_shortcode = get_field('newsletter_shortcode', 'option');
+$lang = function_exists('pll_current_language') ? pll_current_language() : 'en';
+if ($lang === 'de') {
+    $newsletter_text      = get_field('newsletter_text_de', 'option') ?: get_field('newsletter_text', 'option');
+    $newsletter_shortcode = get_field('newsletter_shortcode_de', 'option') ?: get_field('newsletter_shortcode', 'option');
+} else {
+    $newsletter_text      = get_field('newsletter_text', 'option');
+    $newsletter_shortcode = get_field('newsletter_shortcode', 'option');
+}
 ?>
 
 <section class="footer-newsletter">

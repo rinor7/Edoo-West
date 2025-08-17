@@ -13,17 +13,21 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <!-- Change this to "noindex, nofollow" when you go live -->
     <meta name="robots" content="noindex, nofollow"> 
-    <meta name="description" content="<?php echo get_bloginfo('description'); ?>">
      <!-- Open Graph Description (for social media platforms like Facebook, LinkedIn, etc.) -->
-     <?php 
-    // Get values from options page
-    $og_description = get_field('og_description', 'option'); 
-    $og_image = get_field('og_image', 'option');
+    <?php
+    $lang = function_exists('pll_current_language') ? pll_current_language() : 'en';
+    if ($lang === 'de') {
+        $og_description = get_field('og_description_de', 'option') ?: get_field('og_description', 'option');
+        $og_image       = get_field('og_image_de', 'option') ?: get_field('og_image', 'option');
+    } else {
+        $og_description = get_field('og_description', 'option');
+        $og_image       = get_field('og_image', 'option');
+    }
     if (!$og_description) {
-        $og_description = get_theme_mod('base_theme_og_description', get_bloginfo('name')); // fallback to site title
+        $og_description = get_theme_mod('base_theme_og_description', get_bloginfo('name'));
     }
     if (!$og_image) {
-        $og_image = ''; // fallback
+        $og_image = '';
     }
     ?>
     <meta property="og:description" content="<?php echo esc_attr($og_description); ?>" />
@@ -65,52 +69,74 @@
 
         <!-- Header Righside Menu -->
         <header id="header-site" class="site-header rightside-menu-header <?php 
-        if (is_front_page()) echo 'frontpage-header'; 
-        elseif (is_single()) echo 'single-header'; 
-        elseif (is_404()) echo '404-header'; 
-        else echo 'default-header'; 
-        ?>">
+            if (is_front_page()) echo 'frontpage-header'; 
+            elseif (is_single()) echo 'single-header'; 
+            elseif (is_404()) echo 'header-404'; 
+            else echo 'default-header'; 
+            ?>">
             <div class="headerbar header-right-menu" id="headerbar">
                 <div class="container">
                     <div class="menu-here">
                         <nav class="navbar navbar-expand-lg navbar-light navbar-center">
-
-                            <?php if(is_active_sidebar('widget-1') ) { ?>
-                            <a aria-label="logo" class="logo_header" href="<?php echo esc_url(home_url('/')); ?>">
-                                <ul>
-                                    <?php dynamic_sidebar('widget-1');?>
-                                </ul>
-                            </a>
-                            <?php } ?>
-
-                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                                <div class="menu-m">
-                                    <span class="menu-global menu-top"></span>
-                                    <span class="menu-global menu-middle"></span>
-                                    <span class="menu-global menu-bottom"></span>
-                                </div>
-                            </button>
-
-                            <?php wp_nav_menu(
-                                array(
-                                'theme_location'    => 'menu-1',
-                                'menu_id'        => 'primary-menu',
-                                'menu_class'        => 'navbar-nav',
-                                'container_class'  => 'collapse navbar-collapse main-nav-toggle right-canvas-menu',
-                                'container_id'    => 'navbarNav',
-                                )
-                                ); 
-                            ?>
-
-                            <div class="right-widget d-none-mobile">
-                                <?php if(is_active_sidebar('widget-6') ) { ?>
-                                <ul>
-                                    <?php dynamic_sidebar('widget-6');?>
-                                </ul>
+                                <?php if(is_active_sidebar('widget-1') ) { ?>
+                                <a aria-label="logo" class="logo_header" href="<?php echo esc_url(home_url('/')); ?>">
+                                    <ul>
+                                        <?php dynamic_sidebar('widget-1');?>
+                                    </ul>
+                                </a>
                                 <?php } ?>
+                            <?php if (!is_404()) : ?>
+                                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                                    <div class="menu-m">
+                                        <span class="menu-global menu-top"></span>
+                                        <span class="menu-global menu-middle"></span>
+                                        <span class="menu-global menu-bottom"></span>
+                                    </div>
+                                </button>
+                                <?php if(wp_is_mobile()) { ?>
+                                <?php wp_nav_menu(
+                                    array(
+                                    'theme_location'    => 'menu-1',
+                                    'menu_id'        => 'primary-menu',
+                                    'menu_class'        => 'navbar-nav',
+                                    'container_class'  => 'collapse navbar-collapse main-nav-toggle right-canvas-menu',
+                                    'container_id'    => 'navbarNav',
+                                    'items_wrap'        => '<ul id="%1$s" class="%2$s">%3$s<li class="menu-item menu-item-language">' . pll_the_languages(array('dropdown'=>1, 'echo'=>0)) . '</li></ul>'
+                                    )
+                                    ); 
+                                ?>   
+                                <?php } else { ?>
+                                <?php wp_nav_menu(
+                                    array(
+                                    'theme_location'    => 'menu-1',
+                                    'menu_id'        => 'primary-menu',
+                                    'menu_class'        => 'navbar-nav',
+                                    'container_class'  => 'collapse navbar-collapse main-nav-toggle right-canvas-menu',
+                                    'container_id'    => 'navbarNav',
+                                    )
+                                    ); 
+                                ?>
+                                <?php } ?>
+                                <div class="right-widget d-none-mobile">
+                                    <?php if(is_active_sidebar('widget-6') ) { ?>
+                                    <ul>
+                                        <?php dynamic_sidebar('widget-6');?>
+                                    </ul>
+                                    <?php } ?>
+                                </div>
+                                
+                            <?php else : ?>
+                            <?php 
+                            $lang = function_exists('pll_current_language') ? pll_current_language() : 'en';
+                            $home_url = $lang === 'de' ? home_url('/de/') : home_url('/');
+                            ?>
+                            <div class="header-404-button">
+                                <a class="default-btn" href="<?php echo esc_url($home_url); ?>">
+                                    <?php echo $lang === 'de' ? 'Zur Startseite' : 'Back to Homepage'; ?>
+                                </a>
                             </div>
-
+                        <?php endif; ?>
 
                         </nav>
                     </div>

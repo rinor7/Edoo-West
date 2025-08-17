@@ -152,3 +152,22 @@ add_filter('wpcf7_form_tag', function($tag) {
     return $tag;
 });
 
+
+//Breadcrumbs custom
+add_filter('wpseo_breadcrumb_links', function($links) {
+    if (function_exists('pll_current_language') && pll_current_language() === 'de') {
+        // Change the first breadcrumb (home) label and URL for German
+        if (isset($links[0])) {
+            $links[0]['text'] = 'Startseite';
+            $links[0]['url']  = home_url('/de/');
+        }
+
+        // Loop through breadcrumb links and change 'Courses' to 'Kurse'
+        foreach ($links as &$link) {
+            if (isset($link['text']) && $link['text'] === 'Courses') {
+                $link['text'] = 'Kurse';
+            }
+        }
+    }
+    return $links;
+});

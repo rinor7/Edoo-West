@@ -60,12 +60,15 @@ include("includes/headers/{$header_type}.php");
 
 
        <div class="register-form">
-            <?php
-            // Get the WYSIWYG + shortcode from ACF Options Page
-            $extra_section = get_field('extra_section', 'option'); // 'option' makes it pull from Options Page
-
-            if ($extra_section && (!empty($extra_section['title']) || !empty($extra_section['shortcode']))):
-            ?>
+                <?php
+                $lang = function_exists('pll_current_language') ? pll_current_language() : 'en';
+                if ($lang === 'de') {
+                    $extra_section = get_field('extra_section_de', 'option') ?: get_field('extra_section', 'option');
+                } else {
+                    $extra_section = get_field('extra_section', 'option');
+                }
+                if ($extra_section && (!empty($extra_section['title']) || !empty($extra_section['shortcode']))):
+                ?>
                 <section class="extra-section">
                     <div class="container">
 
