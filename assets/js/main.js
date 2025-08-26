@@ -118,20 +118,16 @@ var swiper = new Swiper(".mySwiper-reviews", {
     clickable: true,
   },
   breakpoints: {
-    575.98: {
+    767.98: {
       slidesPerView: 2,
       spaceBetween: 15,
     },
-    767.98: {
-      slidesPerView: 3,
-      spaceBetween: 15,
-    },
     991.98: {
-      slidesPerView: 4,
+      slidesPerView: 3,
       spaceBetween: 16,
     },
     1024: {
-      slidesPerView: 5,
+      slidesPerView: 4,
       spaceBetween: 16,
     },
   },
