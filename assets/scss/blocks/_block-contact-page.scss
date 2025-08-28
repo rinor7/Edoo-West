@@ -53,73 +53,88 @@
     margin: 0 auto;
     .wpcf7 {
         form {
-            display: flex;
-            flex-direction: column;
-            row-gap: 18px;
-            .wpcf7-form-control {
-                &.wpcf7-submit {
-                  @include button;
-                  width: fit-content;
-                  margin: auto;
-                  padding-left: 20px;
-                  padding-right: 20px;
-              }
-            }
-            label {
-                width: 100%;
-                input {
-                    height: 45px;
-                    border-radius: 4px;
-                    padding-left: 12px;
-                    background: #F8F8F8;
-                    color: #5b5b5b;
-                    width: 100%;
-                    border: 1px solid transparent;
-                    &:active, &:focus {
-                        border-color: $primary-color;
-                    }
-                    &::placeholder {
-                        color: #5b5b5b;
-                        font-size: 14px;
-                        font-weight: 400;
-                        line-height: 17px;
-                    }
-                }
-                 textarea {
-                    height: 90px;
-                    border-radius: 4px;
-                    padding-left: 12px;
-                    padding-top: 6px;
-                    background: #F8F8F8;
-                    color: #5b5b5b;
-                    width: 100%;
-                    border: 1px solid transparent;
-                    width: 100%;
-                    font-size: 14px;
-                    font-weight: 400;
-                    line-height: 17px;
-                    &:active, &:focus {
-                        border-color: $primary-color;
-                    }
-                    &::placeholder {
-                        color: #5b5b5b;
-                        font-size: 14px;
-                        font-weight: 400;
-                        line-height: 17px;
-                    }
-                }
-            }
-            .wpcf7-submit {
-                width: fit-content!important;
+          display: flex;
+          flex-direction: column;
+          row-gap: 18px;
+          .wpcf7-form-control {
+              &.wpcf7-submit {
+                @include button;
+                width: fit-content;
                 margin: auto;
                 padding-left: 20px;
                 padding-right: 20px;
-                box-shadow: unset!important;
             }
-            .wpcf7-spinner { 
-                display: none;
-            }
-        }
+          }
+          label {
+              width: 100%;
+              input {
+                  height: 45px;
+                  border-radius: 4px;
+                  padding-left: 12px;
+                  background: #F8F8F8;
+                  color: #5b5b5b;
+                  width: 100%;
+                  border: 1px solid transparent;
+                  &:active, &:focus {
+                      border-color: $primary-color;
+                  }
+                  &::placeholder {
+                      color: #5b5b5b;
+                      font-size: 14px;
+                      font-weight: 400;
+                      line-height: 17px;
+                  }
+              }
+                textarea {
+                  height: 90px;
+                  border-radius: 4px;
+                  padding-left: 12px;
+                  padding-top: 6px;
+                  background: #F8F8F8;
+                  color: #5b5b5b;
+                  width: 100%;
+                  border: 1px solid transparent;
+                  width: 100%;
+                  font-size: 14px;
+                  font-weight: 400;
+                  line-height: 17px;
+                  &:active, &:focus {
+                      border-color: $primary-color;
+                  }
+                  &::placeholder {
+                      color: #5b5b5b;
+                      font-size: 14px;
+                      font-weight: 400;
+                      line-height: 17px;
+                  }
+              }
+          }
+          .wpcf7-submit {
+              width: fit-content!important;
+              margin: auto;
+              padding-left: 20px;
+              padding-right: 20px;
+              box-shadow: unset!important;
+          }
+          .wpcf7-spinner { 
+              display: none;
+          }
+          .wpcf7-form-control-wrap {
+              .wpcf7-not-valid-tip {
+                  display: none;
+              }
+              .wpcf7-not-valid {
+                  border: 1px solid red;
+              }
+          }
+          .wpcf7-response-output {
+              margin: 0;
+              background-color: #ffbb00a9;
+              color: $black;
+              text-align: center;
+              font-size: 14px;
+          }
+      }
     }
   }
 }

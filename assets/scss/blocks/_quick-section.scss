@@ -134,6 +134,21 @@
                             }
                         }
                     }
+                    .wpcf7-form-control-wrap {
+                        .wpcf7-not-valid-tip {
+                            display: none;
+                        }
+                        .wpcf7-not-valid {
+                            border: 1px solid red;
+                        }
+                    }
+                    .wpcf7-response-output {
+                        margin: 0;
+                        background-color: #ffbb00a9;
+                        color: $white;
+                        text-align: center;
+                        font-size: 14px;
+                    }
                 }
             }
         }
