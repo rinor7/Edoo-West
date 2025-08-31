@@ -3,7 +3,7 @@ global $header_type;
 include("includes/headers/{$header_type}.php"); 
 ?>
 
-<main id="primary" class="site-single single-pevents">
+<main id="primary" class="site-single single-events">
 
     <div class="container">
         <div class="row">

@@ -1,11 +1,14 @@
 /*Single Events Start*/
 
 .single-events {
-    padding: 60px 0;
+    // padding: 60px 0;
     @include md {
-        padding: 40px 0;
+        // padding: 40px 0;
     }
    .row {
+    @include md {
+        row-gap: 24px;
+    }
     .lefts {
         .img {
             height: auto;
