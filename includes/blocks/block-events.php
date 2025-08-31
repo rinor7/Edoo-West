@@ -18,7 +18,7 @@
                 array(
                     'key'     => 'event_date',
                     'value'   => $today,
-                    'compare' => '>=', // only future or today’s events
+                    // 'compare' => '>=', // only future or today’s events
                     'type'    => 'DATE'
                 )
             )

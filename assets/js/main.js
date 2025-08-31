@@ -124,7 +124,7 @@ var swiper = new Swiper(".mySwiper-reviews", {
     },
     1024: {
       slidesPerView: 3,
-      spaceBetween: 16,
+      spaceBetween: 40,
     },
   },
 });
