@@ -14,14 +14,14 @@
             'orderby'        => 'meta_value',
             'order'          => 'ASC',
             'meta_type'      => 'DATE',
-            'meta_query'     => array(
-                array(
-                    'key'     => 'event_date',
-                    'value'   => $today,
-                    // 'compare' => '>=', // only future or today’s events
-                    'type'    => 'DATE'
-                )
-            )
+            // 'meta_query'     => array(
+            //     array(
+            //         'key'     => 'event_date',
+            //         'value'   => $today,
+            //         'compare' => '>=', // only future or today’s events
+            //         'type'    => 'DATE'
+            //     )
+            // )
         );
 
         $loop = new WP_Query($args);
