@@ -14,6 +14,12 @@ include("includes/headers/{$header_type}.php");
                     <img src="<?php the_post_thumbnail_url(); ?>" 
                          alt="<?php the_title_attribute(); ?>" 
                          loading="lazy">
+                          <?php 
+                            $badge = get_field('event_badge');
+                            if ($badge && $badge !== 'none') {
+                                echo '<div class="badge ' . esc_attr($badge) . '">' . ucfirst($badge) . '</div>';
+                            }
+                        ?>
                 </div>
             </div>
 
