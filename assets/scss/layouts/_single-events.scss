@@ -1,10 +1,6 @@
 /*Single Events Start*/
 
 .single-events {
-    margin: 40px 0;
-    @include md {
-        margin: 20px 0;
-    }
    .row {
     @include md {
         row-gap: 24px;
