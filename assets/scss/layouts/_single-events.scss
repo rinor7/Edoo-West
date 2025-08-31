@@ -55,7 +55,7 @@
     .rights {
         display: flex;
         flex-direction: column;
-        row-gap: 12px;
+        row-gap: 6px;
         h1 {
             text-align: left;
             font-size: 40px;
@@ -81,9 +81,6 @@
                 &::before {
                     color: $primary-color;
                 }
-            }
-            span {
-                
             }
         }
         .speaker {
