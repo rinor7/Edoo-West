@@ -41,7 +41,7 @@
         },
         {
             "key": "field_689b227cfa369",
-            "label": "Time & Location",
+            "label": "Time & Speaker",
             "name": "",
             "aria-label": "",
             "type": "tab",
@@ -75,6 +75,48 @@
             "maxlength": "",
             "allow_in_bindings": 0,
             "placeholder": "8:00 am - 5:00 pm",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_68b4b76b3c062",
+            "label": "Speaker Title",
+            "name": "speaker-default",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Don't put Speaker's name here.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Speaker",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "placeholder": "This is title \"Speaker\"",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_68b4b683f30f5",
+            "label": "Speaker",
+            "name": "speaker",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "placeholder": "",
             "prepend": "",
             "append": ""
         },
@@ -162,7 +204,9 @@
             "allow_in_bindings": 0,
             "ui": 0,
             "ajax": 0,
-            "placeholder": ""
+            "placeholder": "",
+            "create_options": 0,
+            "save_options": 0
         },
         {
             "key": "field_689fa32e46e7e",
@@ -204,5 +248,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1755292489
+    "modified": 1756673981
 }

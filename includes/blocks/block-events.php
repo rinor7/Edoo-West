@@ -58,6 +58,12 @@
             ?>
             <h4><?php the_title(); ?></h4>
 
+            <?php if (get_field('speaker')): ?>
+                <div class="speaker">
+                    <b><?php the_field('speaker-default'); ?>:</b><span> <?php the_field('speaker'); ?></span>
+                </div>
+            <?php endif; ?>
+
             <?php if (get_field('time')): ?>
                 <div class="shift">
                     <span><i class="fa-regular fa-clock"></i><?php the_field('time'); ?></span>
