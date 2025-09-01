@@ -29,6 +29,9 @@
                     height: 250px;
                     position: relative;
                     overflow: hidden;
+                    @include sm {
+                        height: 200px;
+                    }
                     img {
                         width: 100%;
                         height: 100%;
