@@ -218,16 +218,14 @@ var swiper = new Swiper(".aboutUsSwiper", {
 document.addEventListener('DOMContentLoaded', function() {
     const select = document.querySelector('select[name="course-select"]');
     const otherWrap = document.querySelector('.other-course-wrap');
+    const otherInput = document.querySelector('input[name="other-course"]');
 
     if (select && otherWrap) {
-        // Make first option disabled (placeholder)
-        if (select.options.length > 0) {
-            select.options[0].disabled = true;
-        }
+        select.options[0].disabled = true;
 
         select.addEventListener('change', function() {
-            if (this.value === 'Other') {
-                otherWrap.style.display = 'block';
+            if (this.value === 'other') {
+            otherWrap.style.display = 'block';
             } else {
                 otherWrap.style.display = 'none';
             }
