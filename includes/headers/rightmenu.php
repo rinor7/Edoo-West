@@ -12,7 +12,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <!-- Change this to "noindex, nofollow" when you go live -->
-    <meta name="robots" content="noindex, nofollow"> 
+    <!-- <meta name="robots" content="noindex, nofollow">  -->
      <!-- Open Graph Description (for social media platforms like Facebook, LinkedIn, etc.) -->
     <?php
     $lang = function_exists('pll_current_language') ? pll_current_language() : 'en';
