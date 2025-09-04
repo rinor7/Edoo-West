@@ -75,7 +75,7 @@
                   color: #5b5b5b;
                   width: 100%;
                   border: 1px solid transparent;
-                  &:active, &:focus {
+                    &:active, &:focus {
                       border-color: $primary-color;
                   }
                   &::placeholder {
